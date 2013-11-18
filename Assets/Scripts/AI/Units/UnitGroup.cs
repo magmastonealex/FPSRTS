@@ -15,7 +15,7 @@ public class UnitGroup : MonoBehaviour {
 	}
 	}
 
-	void goControl(GameObject chosen){
+	public void goControl(GameObject chosen){
 		setTarget(chosen.transform);
 		FPSInputController fps = chosen.GetComponent<FPSInputController>();
 		fps.isControlling = true;

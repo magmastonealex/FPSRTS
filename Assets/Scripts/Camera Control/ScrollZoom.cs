@@ -12,9 +12,9 @@ public class ScrollZoom : MonoBehaviour {
 	void Update () {
 	float deltaScroll = Input.GetAxis("Mouse ScrollWheel");
 	if(deltaScroll < 0){
-		transform.position -= Vector3.up;
+		this.camera.orthographicSize-=1;
 	}else if (deltaScroll > 0){
-		transform.position += Vector3.up;
+		this.camera.orthographicSize += 1;
 	}
 }
 }

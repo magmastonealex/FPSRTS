@@ -36,6 +36,8 @@ public class UnitGroup : MonoBehaviour {
 			fps.isControlling = false;
 			MouseLook ml = slave.GetComponent<MouseLook>();
 			ml.active = false;
+			slave.transform.Find ("Main Camera").gameObject.GetComponent<MouseLook> ().active = true;
+			slave.GetComponent<MouseLook>().active = true;
 			GoToPoint gtp = slave.GetComponent<GoToPoint>();
 			gtp.canControl = true;
 			gtp.target = targ;
@@ -45,9 +47,11 @@ public class UnitGroup : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate() {
 		if (Input.GetKeyDown("q")) {
+			this.setTarget(targe);
 			if(scd.inFPS){
 				scd.inFPS = false;
-				this.setTarget(targe);
+				GameObject.Find("RTSCamera").GetComponent<wasdMove>().enabled=true;
+				GameObject.Find("RTSCamera").GetComponent<ScrollZoom>().enabled=true;
 			}
 		}
 	}

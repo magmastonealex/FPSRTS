@@ -15,6 +15,8 @@ public class UnitSlave : MonoBehaviour {
 		if (Input.GetMouseButtonDown (2)) {
 			if(!scd.inFPS){
 			scd.inFPS = true;
+			GameObject.Find("RTSCamera").GetComponent<wasdMove>().enabled=false;
+			GameObject.Find("RTSCamera").GetComponent<ScrollZoom>().enabled=false;
 			master.goControl(this.gameObject);
 			}
 		}

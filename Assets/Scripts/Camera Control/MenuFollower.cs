@@ -23,7 +23,7 @@ public class MenuFollower : MonoBehaviour {
 		if(menuShowing){
 			Vector3 vec = this.gameObject.GetComponent<Camera>().WorldToScreenPoint(tofollow.position);
 			if(vec.x > 0 && vec.y >0){
-				Debug.Log(vec.y);
+			//	Debug.Log(vec.y);
 				GUI.Box(new Rect(vec.x,Screen.height-vec.y,100,90), "Unit Menu");
 				GUI.Button(new Rect(vec.x,Screen.height-vec.y+20,90,15), "Attack");
 				GUI.Button(new Rect(vec.x,Screen.height-vec.y+20+15,90,15), "Defend");

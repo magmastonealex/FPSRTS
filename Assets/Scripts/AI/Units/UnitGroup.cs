@@ -5,8 +5,10 @@ public class UnitGroup : MonoBehaviour {
 
 	public GameObject[] slaves;
 	public Transform targe;
+	private SceneCoordinator scd;
 	// Use this for initialization
 	void Start () {
+	scd = GameObject.Find ("SceneCoordinator").GetComponent<SceneCoordinator>();
 	setTarget(targe);
 	foreach (GameObject slave in slaves){
 		UnitSlave us = slave.GetComponent<UnitSlave>();
@@ -19,6 +21,10 @@ public class UnitGroup : MonoBehaviour {
 		setTarget(chosen.transform);
 		FPSInputController fps = chosen.GetComponent<FPSInputController>();
 		fps.isControlling = true;
+
+		chosen.transform.Find ("Main Camera").gameObject.GetComponent<MouseLook> ().active = true;
+		chosen.GetComponent<MouseLook>().active = true;
+
 		GoToPoint gtp = chosen.GetComponent<GoToPoint>();
 		gtp.canControl = false;
 		chosen.GetComponentInChildren<Camera>().enabled=true;
@@ -28,6 +34,8 @@ public class UnitGroup : MonoBehaviour {
 		foreach (GameObject slave in slaves){
 			FPSInputController fps = slave.GetComponent<FPSInputController>();
 			fps.isControlling = false;
+			MouseLook ml = slave.GetComponent<MouseLook>();
+			ml.active = false;
 			GoToPoint gtp = slave.GetComponent<GoToPoint>();
 			gtp.canControl = true;
 			gtp.target = targ;
@@ -35,7 +43,12 @@ public class UnitGroup : MonoBehaviour {
 		}
 	}
 	// Update is called once per frame
-	void Update () {
-	
+	void LateUpdate() {
+		if (Input.GetKeyDown("q")) {
+			if(scd.inFPS){
+				scd.inFPS = false;
+				this.setTarget(targe);
+			}
+		}
 	}
 }

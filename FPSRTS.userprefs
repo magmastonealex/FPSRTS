@@ -1,10 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Camera Control\getCameraExtents.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js">
     <Files>
-      <File FileName="Assets\Scripts\Camera Control\getCameraExtents.cs" Line="21" Column="2" />
-      <File FileName="Assets\Scripts\MiniMapGUIStyle.cs" Line="5" Column="21" />
-      <File FileName="Assets\Scripts\Camera Control\cameraRectDrawer.cs" Line="13" Column="1" />
+      <File FileName="Assets\Scripts\AI\Units\UnitGroup.cs" Line="25" Column="19" />
+      <File FileName="Assets\Scripts\Camera Control\getCameraExtents.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MiniMapGUIStyle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Camera Control\cameraRectDrawer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AI\Units\UnitSlave.cs" Line="10" Column="78" />
+      <File FileName="Assets\Scripts\AI\Units\UnitMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Drawing.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Camera Control\MenuFollower.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneCoordinator.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
